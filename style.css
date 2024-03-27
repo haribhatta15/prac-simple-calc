@@ -1,59 +1,56 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Popins", sans-serif;
   box-sizing: border-box;
 }
-
-html {
-  background: purple;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 .container {
-  background: white;
-  max-width: 400px;
-  box-shadow: 0 0 15px black;
-}
-
-.display {
-  height: 100px;
-  padding: 1rem 0.5rem;
-  font-size: 2rem;
-  color: black;
+  width: 100%;
+  height: 100vh;
+  background: #e3f9ff;
   display: flex;
-  justify-content: end;
   align-items: center;
-  background: rgba(189, 189, 189, 0.274);
+  justify-content: center;
 }
 
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.calculator {
+  background: #3a4452;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.buttons > div {
-  border: 1px solid #999;
-}
-
-.button {
-  font-weight: bold;
-  color: black;
-  text-align: center;
+.calculator form input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
   cursor: pointer;
-  font-size: 2rem;
-  padding: 1.5rem;
+  margin: 10px;
 }
 
-.button:hover {
-  background: rgba(177, 177, 177, 0.33);
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
 }
 
-#equal {
-  grid-column: span 2;
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 45px;
+  box-shadow: none;
+}
+
+form input.equal {
+  width: 145px;
+}
+
+form input.operator {
+  color: red;
 }
